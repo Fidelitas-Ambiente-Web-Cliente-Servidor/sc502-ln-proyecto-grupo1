@@ -1,0 +1,62 @@
+/* CONTENEDOR FORMULARIO */
+
+.form-container {
+    width: 800px;
+    margin: 50px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Formulario */
+
+.fila {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    resize: none;
+    height: 90px;
+}
+
+/* Mensajes */
+
+.mensaje {
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.exito {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}

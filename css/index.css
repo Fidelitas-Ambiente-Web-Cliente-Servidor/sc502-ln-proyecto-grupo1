@@ -1,0 +1,105 @@
+.hero {
+    background-image: url('../img/adopta 3.png');
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-contenido {
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.hero-contenido h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.hero-contenido p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* BIENVENIDA */
+
+.info {
+    background: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* TARJETAS */
+
+.info-secciones {
+    width: 1000px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.grid-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    text-align: left;
+}
+
+.card h3 {
+    background-color: #2E86C1;
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.card h3:hover {
+    background-color: #1f618d;
+}
+
+.contenido {
+    display: none;
+}
+
+
+.valores {
+    background: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.valores-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.valor {
+    width: 260px;
+}
+
+.valor h4 {
+    color: #2E86C1;
+    margin-bottom: 10px;
+}
