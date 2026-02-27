@@ -10,15 +10,20 @@
 
 <body>
 
+
+
+<!-- bar para ver diferente partes,LOGO,  Conózoncanos , trámites y servicios, FAQ, CONTACTO  (Andrés)-->
 <header>
     <div class="logo">
         <span class="icono">💙</span>
-        <div>
+        <section id="Nombre-Agencia">
             <h1>AdoptaCR</h1>
             <p>Proceso Inicial de Adopción</p>
-        </div>
+        </section>
     </div>
 </header>
+
+
 
 
 
@@ -44,7 +49,10 @@
     </p>
 </section>
 
-<!-- Proceso -->
+
+            <!-- ponerlo en carousel  y usar cards con imaganes (Andrés) --> 
+
+<!-- Proceso -->  
 
 <section class="info-secciones">
 
