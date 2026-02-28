@@ -54,13 +54,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <div class="form-container">
 
-    <h2>Solicitud Inicial de Adopción</h2>
+    <div class="form-header">
+        <h2>Solicitud Inicial de Adopción</h2>
+        <p>Complete el siguiente formulario con sus datos personales para iniciar el proceso de adopción.</p>
+    </div>
 
     <form method="post">
 
         <div class="fila">
             <div class="form-group">
-                <label>Nombre</label>
+                <label>Nombre <span class="requerido">*</span></label>
                 <input type="text" name="nombre"
                 pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]+" 
                 title="Solo se permiten letras"
@@ -68,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
 
             <div class="form-group">
-                <label>Apellidos</label>
+                <label>Apellidos <span class="requerido">*</span></label>
                 <input type="text" name="apellidos"
                 pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]+" 
                 title="Solo se permiten letras"
@@ -78,15 +81,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <div class="fila">
             <div class="form-group">
-                <label>Cédula</label>
+                <label>Cédula <span class="requerido">*</span></label>
                 <input type="text" name="cedula"
+                placeholder="Ingrese tal y como aparece en su cédula"
                 pattern="[0-9]+" 
                 title="Solo números"
                 required>
             </div>
 
             <div class="form-group">
-                <label>Edad</label>
+                <label>Edad <span class="requerido">*</span></label>
                 <input type="number" name="edad"
                 min="25"
                 required>
@@ -95,7 +99,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <div class="fila">
             <div class="form-group">
-                <label>Estado Civil</label>
+                <label>Estado Civil <span class="requerido">*</span></label>
                 <select name="estado" required>
                     <option value="">Seleccione</option>
                     <option>Soltero(a)</option>
@@ -105,22 +109,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
 
             <div class="form-group">
-                <label>Correo Electrónico</label>
+                <label>Correo Electrónico <span class="requerido">*</span></label>
                 <input type="email" name="correo" required>
             </div>
         </div>
 
         <div class="fila">
             <div class="form-group">
-                <label>Teléfono</label>
+                <label>Teléfono <span class="requerido">*</span></label>
                 <input type="text" name="telefono"
+                placeholder="Ingrese los 8 dígitos de su teléfono"
                 pattern="[0-9]{8}"
                 title="Debe contener 8 dígitos"
                 required>
             </div>
 
             <div class="form-group">
-                <label>Ocupación</label>
+                <label>Ocupación <span class="requerido">*</span></label>
                 <input type="text" name="ocupacion"
                 pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]+"
                 title="Solo letras"
@@ -129,11 +134,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 
         <div class="form-group">
-            <label>Motivo de adopción</label>
-            <textarea name="motivo" required></textarea>
+            <label>Motivo de adopción <span class="requerido">*</span></label>
+            <textarea name="motivo" placeholder="Explique brevemente por qué desea adoptar" required></textarea>
         </div>
 
-        <button type="submit" class="btn">Enviar Solicitud</button>
+        <button type="submit" class="btn btn-full">Enviar Solicitud</button>
 
     </form>
 

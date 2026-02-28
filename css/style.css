@@ -1,18 +1,21 @@
-/*GENERAL*/
+* {
+    box-sizing: border-box;
+}
 
+/* body */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f4f6f9;
+    background: radial-gradient(circle at top, #e3f2fd 0, #f4f6f9 55%, #e9eef5 100%);
     color: #333;
 }
 
-/*hearder */
-
+/* header */
 header {
     background-color: #2E86C1;
     color: white;
     padding: 15px 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 .logo {
@@ -25,11 +28,13 @@ header {
 .logo h1 {
     margin: 0;
     font-size: 28px;
+    letter-spacing: 1px;
 }
 
 .logo p {
     margin: 0;
     font-size: 14px;
+    opacity: 0.9;
 }
 
 .icono {
@@ -37,7 +42,6 @@ header {
 }
 
 /* botones */
-
 .btn {
     display: inline-block;
     padding: 10px 20px;
@@ -45,18 +49,29 @@ header {
     color: white;
     text-decoration: none;
     border-radius: 6px;
-    transition: 0.3s;
+    transition: 0.2s ease;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.btn-full {
+    width: 100%;
+    margin-top: 10px;
 }
 
 .btn:hover {
     background-color: #1E8449;
+    transform: translateY(-1px);
 }
 
-/* footer*/
-
+/* footer */
 footer {
     background-color: #2E86C1;
     color: white;
     text-align: center;
     padding: 15px;
+    font-size: 14px;
+    margin-top: 40px;
 }

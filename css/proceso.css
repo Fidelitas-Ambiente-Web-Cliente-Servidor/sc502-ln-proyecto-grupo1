@@ -1,0 +1,157 @@
+.proceso-hero {
+    background: #f4f6fb;
+    border-bottom: 1px solid #e1e6f0;
+    padding: 25px 15px;
+}
+
+.proceso-hero-contenido {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.proceso-hero h2 {
+    margin: 0 0 8px;
+    font-size: 24px;
+    color: #2E4053;
+}
+
+.proceso-hero p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+
+.proceso-pasos,
+.proceso-roles,
+.proceso-aviso,
+.proceso-acciones {
+    max-width: 900px;
+    margin: 25px auto;
+    padding: 0 15px;
+}
+
+.proceso-aviso p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* pasos */
+
+.pasos-lista {
+    list-style: none;
+    margin: 15px 0 0;
+    padding: 0;
+    border-left: 2px solid #e1e6f0;
+}
+
+.pasos-lista li {
+    position: relative;
+    padding: 10px 0 10px 18px;
+}
+
+.paso-numero {
+    position: absolute;
+    left: -15px;
+    top: 12px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #2E86C1;
+    color: white;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.paso-contenido h4 {
+    margin: 0 0 3px;
+    font-size: 15px;
+    color: #2E4053;
+}
+
+.paso-contenido p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+/* lista */
+
+.roles-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 12px;
+}
+
+.rol-card {
+    background: #f7f9fc;
+    border-radius: 10px;
+    padding: 15px 18px;
+    border: 1px solid #e1e6f0;
+}
+
+.rol-card h4 {
+    margin: 0 0 8px;
+    font-size: 15px;
+    color: #2E4053;
+}
+
+.rol-card ul {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 13px;
+    color: #555;
+}
+
+/* aviso box */
+
+.proceso-aviso {
+    background: #fff8e1;
+    border-radius: 10px;
+    border: 1px solid #ffe8a3;
+    padding: 15px 18px;
+    font-weight: bold;
+}
+
+.proceso-aviso h3 {
+    margin: 0 0 5px;
+    font-size: 15px;
+    color: #8a6d3b;
+}
+
+/* hover */
+
+.proceso-acciones {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.btn-outline {
+    background: #2E86C1;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+.btn-outline:hover {
+    background: #ffffff;
+    color: #2E86C1;
+}
+
+/* responsividad */
+
+@media (max-width: 768px) {
+    .roles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .proceso-acciones {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

@@ -90,6 +90,7 @@
 
         <div class="card">
             <h3 onclick="toggleSeccion('proceso')">Proceso de Adopción</h3>
+
             <div id="proceso" class="contenido">
                 <ol>
                     <li>Registro de solicitud inicial.</li>
@@ -98,6 +99,8 @@
                     <li>Análisis de idoneidad.</li>
                     <li>Resolución final.</li>
                 </ol>
+
+                <a href="proceso.php" class="btn btn-masinformacion">Más información</a>
             </div>
         </div>
 
