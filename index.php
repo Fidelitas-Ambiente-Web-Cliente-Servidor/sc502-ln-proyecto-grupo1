@@ -6,22 +6,78 @@
 
     <link rel="stylesheet" href="/sc502-ln-proyecto-grupo1/css/style.css">
     <link rel="stylesheet" href="/sc502-ln-proyecto-grupo1/css/index.css">
-</head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  </head>
 
 <body>
 
 
 
-<!-- bar para ver diferente partes,LOGO,  Conózoncanos , trámites y servicios, FAQ, CONTACTO  (Andrés)-->
+<!-- bar para ver diferente partes,LOGO,  Conózoncanos , trámites y servicios, FAQ, CONTACTO  (Andrés) -->
+
+<!--                                                                          (Andrés) Terminado-->
 <header>
-    <div class="logo">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+    <div class="container">
+        
+    <a class="navbar-brand" href="index.php">
+            <img src="./img/logo2.png" width="125"><br>
+        </a>
+        
+          <button class="navbar-toggler" type="button"> 
+            <span class="navbar-toggler-icon"></span>
+        </button>
+         <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link nav-link-custom <?php echo $activePage == 'inicio' ? 'active' : ''; ?>" href="index.php">
+                        Inicio
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-custom <?php echo $activePage == 'conocenos' ? 'active' : ''; ?>" href="conocenos.php">
+                        Conócenos
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-custom <?php echo $activePage == 'servicios' ? 'active' : ''; ?>" href="servicios.php">
+                        Servicios
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-custom <?php echo $activePage == 'tramites' ? 'active' : ''; ?>" href="tramites.php">
+                        Trámites
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-custom <?php echo $activePage == 'faq' ? 'active' : ''; ?>" href="faq.php">
+                        FAQ
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-custom <?php echo $activePage == 'contacto' ? 'active' : ''; ?>" href="contacto.php">
+                        Contacto
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+    </nav>
+    
+    
+</header>
+
+<section id="Proceso-adoptarcr">
+     <div class="logo">
         <span class="icono">💙</span>
         <section id="Nombre-Agencia">
             <h1>AdoptaCR</h1>
             <p>Proceso Inicial de Adopción</p>
         </section>
     </div>
-</header>
+</section>
 
 
 
