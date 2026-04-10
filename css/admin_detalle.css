@@ -1,0 +1,83 @@
+.contenedor-detalle {
+    max-width: 900px;
+    margin: 50px auto;
+}
+
+.card-detalle {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.08);
+}
+
+.titulo {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.titulo h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.item {
+    background: #f5f7fb;
+    padding: 12px 15px;
+    border-radius: 10px;
+}
+
+.item strong {
+    display: block;
+    font-size: 13px;
+    color: #666;
+}
+
+.item span {
+    font-size: 15px;
+}
+
+.motivo {
+    margin-top: 20px;
+    background: #f5f7fb;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.estado {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.estado.aprobado { background: #c8e6c9; }
+.estado.rechazado { background: #ffcdd2; }
+.estado.revision { background: #ffe082; }
+
+.pdf-box {
+    margin-top: 20px;
+}
+
+.btn-pdf {
+    background: #2196F3;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.btn-volver {
+    margin-top: 25px;
+    display: inline-block;
+    background: #607d8b;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+}

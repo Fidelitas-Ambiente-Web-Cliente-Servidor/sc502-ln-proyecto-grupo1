@@ -1,8 +1,13 @@
 <?php
+require_once "config/database.php";
+
+$db = new Database();
+$conn = $db->connect();
+
 $mensaje = "";
 $claseMensaje = "";
 
-/* variables sin warnings */
+/* variables */
 $nombre = $_POST["nombre"] ?? "";
 $apellidos = $_POST["apellidos"] ?? "";
 $cedula = $_POST["cedula"] ?? "";
@@ -13,19 +18,57 @@ $telefono = $_POST["telefono"] ?? "";
 $ocupacion = $_POST["ocupacion"] ?? "";
 $motivo = $_POST["motivo"] ?? "";
 
-/* Validación */
+/* GUARDAR */
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($edad != "" && is_numeric($edad)) {
 
         if ($edad >= 25) {
-            $mensaje = "Solicitud enviada correctamente. Será revisada por el departamento correspondiente.";
-            $claseMensaje = "exito";
+
+            
+            $rutaDocumento = "";
+
+            if (isset($_FILES["documento"]) && $_FILES["documento"]["error"] == 0) {
+
+                $archivo = $_FILES["documento"]["name"];
+                $tmp = $_FILES["documento"]["tmp_name"];
+
+                $rutaDocumento = "uploads/" . time() . "_" . $archivo;
+
+                move_uploaded_file($tmp, $rutaDocumento);
+            }
+
+           
+            $stmt = $conn->prepare("INSERT INTO solicitudes 
+            (nombre, apellidos, cedula, edad, estado_civil, correo, telefono, ocupacion, motivo, documento)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+
+            $stmt->bind_param(
+                "sssissssss",
+                $nombre,
+                $apellidos,
+                $cedula,
+                $edad,
+                $estado,
+                $correo,
+                $telefono,
+                $ocupacion,
+                $motivo,
+                $rutaDocumento
+            );
+
+            if ($stmt->execute()) {
+                $mensaje = "Solicitud enviada correctamente. Será revisada por el departamento correspondiente.";
+                $claseMensaje = "exito";
+            } else {
+                $mensaje = "Error al guardar en base de datos.";
+                $claseMensaje = "error";
+            }
+
         } else {
             $mensaje = "No cumple con el requisito mínimo de edad (25 años).";
             $claseMensaje = "error";
         }
-
     }
 }
 ?>
@@ -59,7 +102,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p>Complete el siguiente formulario con sus datos personales para iniciar el proceso de adopción.</p>
     </div>
 
-    <form method="post">
+    
+    <form method="post" enctype="multipart/form-data">
 
         <div class="fila">
             <div class="form-group">
@@ -136,6 +180,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="form-group">
             <label>Motivo de adopción <span class="requerido">*</span></label>
             <textarea name="motivo" placeholder="Explique brevemente por qué desea adoptar" required></textarea>
+        </div>
+
+        <!-- SUBIR PDF -->
+        <div class="form-group">
+            <label>Documento (PDF) <span class="requerido">*</span></label>
+            <input type="file" name="documento" accept=".pdf" required>
         </div>
 
         <button type="submit" class="btn btn-full">Enviar Solicitud</button>

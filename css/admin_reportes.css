@@ -1,0 +1,65 @@
+.contenedor {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.filtro {
+    margin: 20px;
+}
+
+.filtro input {
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.filtro button {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    background: #90caf9;
+    cursor: pointer;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px;
+}
+
+.card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    width: 120px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+}
+
+/* BARRAS */
+.barra {
+    background: #eee;
+    height: 12px;
+    border-radius: 10px;
+    margin: 10px auto;
+    width: 60%;
+}
+
+.progreso {
+    height: 12px;
+    border-radius: 10px;
+}
+
+.verde { background: #81c784; }
+.rojo { background: #e57373; }
+.amarillo { background: #ffe082; }
+
+/* PASTEL */
+.pastel {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px auto;
+}

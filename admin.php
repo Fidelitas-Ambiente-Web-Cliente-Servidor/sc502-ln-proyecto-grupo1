@@ -44,25 +44,25 @@
         <div class="card">
             <h3>Gestión de Solicitudes</h3>
             <p>Revisar, aprobar o rechazar solicitudes.</p>
-            <a href="#" class="btn">Ingresar</a>
+            <a href="admin_solicitudes.php" class="btn">Ingresar</a>
         </div>
 
         <div class="card">
             <h3>Gestión de Usuarios</h3>
             <p>Administrar cuentas del sistema.</p>
-            <a href="#" class="btn">Ingresar</a>
+            <a href="admin_usuarios.php" class="btn">Ingresar</a>
         </div>
 
         <div class="card">
             <h3>Contenido Informativo</h3>
             <p>Actualizar requisitos y etapas del proceso.</p>
-            <a href="#" class="btn">Ingresar</a>
+            <a href="admin_contenido.php" class="btn">Ingresar</a>
         </div>
 
         <div class="card">
             <h3>Reportes</h3>
             <p>Visualizar estadísticas del sistema.</p>
-            <a href="#" class="btn">Ingresar</a>
+            <a href="admin_reportes.php" class="btn">Ingresar</a>
         </div>
 
     </div>

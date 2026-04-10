@@ -1,0 +1,79 @@
+.tramites-container {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.grid-tramites {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.card-tramite {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: 0.2s;
+}
+
+.card-tramite:hover {
+    transform: scale(1.02);
+}
+
+.card-tramite h3 {
+    color: #2E86C1;
+    margin-bottom: 10px;
+}
+
+.btn-tramite {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #2E86C1;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    border: none;
+}
+
+.btn-tramite:hover {
+    background: #1f618d;
+}
+
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2E86C1;
+}
+
+form input[type="file"] {
+    border: 2px dashed #2E86C1;
+    padding: 10px;
+    background: #f8fbff;
+    cursor: pointer;
+}
+
+
+#file-list p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+
+.documentos {
+    margin: 40px;
+    padding: 20px;
+    background: #f0f8ff;
+    border-radius: 10px;
+}
+
+
+.legal {
+    margin: 40px;
+    padding: 15px;
+    background: #fff3cd;
+    border-radius: 10px;
+}

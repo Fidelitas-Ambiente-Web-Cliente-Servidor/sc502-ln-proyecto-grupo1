@@ -1,0 +1,98 @@
+.contenedor-admin {
+    max-width: 1000px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.filtros {
+    margin-bottom: 20px;
+}
+
+.filtros a {
+    padding: 8px 15px;
+    margin: 5px;
+    background: #e9ecef;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.filtros a:hover {
+    background: #dee2e6;
+}
+
+.tabla-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.08);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    padding: 12px;
+    border-bottom: 2px solid #ddd;
+    font-weight: 600;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+/* BOTONES SUAVES */
+.btn {
+    padding: 6px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    margin: 2px;
+    display: inline-block;
+}
+
+.btn.ver {
+    background: #90a4ae;
+    color: #263238;
+}
+
+.btn.ver:hover {
+    background: #78909c;
+}
+
+.btn.eliminar {
+    background: #ef9a9a;
+    color: #b71c1c;
+}
+
+.btn.eliminar:hover {
+    background: #e57373;
+}
+
+/* ESTADOS */
+.estado {
+    padding: 5px 12px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.estado.aprobado {
+    background: #d4edda;
+    color: #2e7d32;
+}
+
+.estado.rechazado {
+    background: #f8d7da;
+    color: #c62828;
+}
+
+.estado.revision {
+    background: #fff3cd;
+    color: #856404;
+}
