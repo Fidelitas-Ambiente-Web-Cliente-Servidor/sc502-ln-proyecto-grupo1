@@ -43,7 +43,7 @@ $data = $result->fetch_assoc();
     font-size: 24px;
 }
 
-/* GRID BONITO */
+
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -66,7 +66,7 @@ $data = $result->fetch_assoc();
     font-size: 15px;
 }
 
-/* MOTIVO */
+
 .motivo {
     margin-top: 20px;
     background: #f5f7fb;
@@ -74,7 +74,7 @@ $data = $result->fetch_assoc();
     border-radius: 10px;
 }
 
-/* ESTADO */
+
 .estado {
     display: inline-block;
     padding: 6px 12px;
@@ -86,7 +86,6 @@ $data = $result->fetch_assoc();
 .estado.rechazado { background: #ffcdd2; }
 .estado.revision { background: #ffe082; }
 
-/* PDF */
 .pdf-box {
     margin-top: 20px;
 }
@@ -99,7 +98,7 @@ $data = $result->fetch_assoc();
     text-decoration: none;
 }
 
-/* VOLVER */
+
 .btn-volver {
     margin-top: 25px;
     display: inline-block;

@@ -36,15 +36,15 @@ $porcE = $total ? ($revision/$total)*100 : 0;
 ?>
 
 <!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<title>Reportes</title>
+    <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+                <title>Reportes</title>
 
-<link rel="stylesheet" href="/sc502-ln-proyecto-grupo1/css/style.css">
-<link rel="stylesheet" href="/sc502-ln-proyecto-grupo1/css/admin_reportes.css">
+                    <link rel="stylesheet" href="/sc502-ln-proyecto-grupo1/css/style.css">
+                    <link rel="stylesheet" href="/sc502-ln-proyecto-grupo1/css/admin_reportes.css">
 
-</head>
+        </head>
 
 <body>
 

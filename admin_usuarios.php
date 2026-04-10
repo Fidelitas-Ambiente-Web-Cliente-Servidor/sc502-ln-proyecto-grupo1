@@ -32,22 +32,22 @@ if ($filtro == "aprobadas") {
 $sql = "SELECT * FROM solicitudes $where ORDER BY id DESC";
 $result = $conn->query($sql);
 
-if (!$result) {
-    die("Error en consulta: " . $conn->error);
-}
-?>
+    if (!$result) {
+        die("Error en consulta: " . $conn->error);
+    }
+    ?>
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<title>Gestión de Usuarios</title>
+    <!DOCTYPE html>
+        <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+                <title>Gestión de Usuarios</title>
 
-<link rel="stylesheet" href="/sc502-ln-proyecto-grupo1/css/style.css">
-<link rel="stylesheet" href="/sc502-ln-proyecto-grupo1/css/admin.css">
-<link rel="stylesheet" href="/sc502-ln-proyecto-grupo1/css/admin_usuarios.css">
+                <link rel="stylesheet" href="/sc502-ln-proyecto-grupo1/css/style.css">
+                <link rel="stylesheet" href="/sc502-ln-proyecto-grupo1/css/admin.css">
+                <link rel="stylesheet" href="/sc502-ln-proyecto-grupo1/css/admin_usuarios.css">
 
-</head>
+        </head>
 
 <body>
 
@@ -63,83 +63,83 @@ if (!$result) {
 
 <main>
 
-<section class="admin-dashboard">
+    <section class="admin-dashboard">
 
-<div class="contenedor-admin">
+    <div class="contenedor-admin">
 
-<h2>Usuarios registrados</h2>
+    <h2>Usuarios registrados</h2>
 
-<div class="filtros">
-    <a href="?filtro=todas">Todas</a>
-    <a href="?filtro=aprobadas">Aprobadas</a>
-    <a href="?filtro=rechazadas">Rechazadas</a>
-    <a href="?filtro=revision">En revisión</a>
-</div>
+    <div class="filtros">
+        <a href="?filtro=todas">Todas</a>
+        <a href="?filtro=aprobadas">Aprobadas</a>
+        <a href="?filtro=rechazadas">Rechazadas</a>
+        <a href="?filtro=revision">En revisión</a>
+    </div>
 
-<div class="tabla-card">
+    <div class="tabla-card">
 
-<table>
+    <table>
 
-<tr>
-    <th>ID</th>
-    <th>Nombre</th>
-    <th>Correo</th>
-    <th>Teléfono</th>
-    <th>Estado</th>
-    <th>Acciones</th>
-</tr>
+    <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Correo</th>
+        <th>Teléfono</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+    </tr>
 
-<?php while($row = $result->fetch_assoc()): ?>
-<tr>
+    <?php while($row = $result->fetch_assoc()): ?>
+    <tr>
 
-<td><?= $row['id'] ?></td>
+        <td><?= $row['id'] ?></td>
 
-<td><?= $row['nombre'] . " " . $row['apellidos'] ?></td>
+        <td><?= $row['nombre'] . " " . $row['apellidos'] ?></td>
 
-<td><?= $row['correo'] ?></td>
+        <td><?= $row['correo'] ?></td>
 
-<td><?= $row['telefono'] ?></td>
+        <td><?= $row['telefono'] ?></td>
 
-<td>
-<?php
-if ($row['estado'] == "Aprobado") {
-    echo "<span class='estado aprobado'>Aprobado</span>";
-} elseif ($row['estado'] == "Rechazado") {
-    echo "<span class='estado rechazado'>Rechazado</span>";
-} else {
-    echo "<span class='estado revision'>En revisión</span>";
-}
-?>
-</td>
+    <td>
+    <?php
+    if ($row['estado'] == "Aprobado") {
+        echo "<span class='estado aprobado'>Aprobado</span>";
+    } elseif ($row['estado'] == "Rechazado") {
+        echo "<span class='estado rechazado'>Rechazado</span>";
+    } else {
+        echo "<span class='estado revision'>En revisión</span>";
+    }
+    ?>
+    </td>
 
-<td>
+    <td>
 
-<a href="admin_ver_solicitud.php?id=<?= $row['id'] ?>" class="btn ver">
-    Ver
-</a>
+    <a href="admin_ver_solicitud.php?id=<?= $row['id'] ?>" class="btn ver">
+        Ver
+    </a>
 
-<a href="?accion=eliminar&id=<?= $row['id'] ?>" class="btn eliminar"
-   onclick="return confirm('¿Eliminar este usuario?')">
-    Eliminar
-</a>
+    <a href="?accion=eliminar&id=<?= $row['id'] ?>" class="btn eliminar"
+        onclick="return confirm('¿Eliminar este usuario?')">
+        Eliminar
+    </a>
 
-</td>
+    </td>
 
-</tr>
-<?php endwhile; ?>
+    </tr>
+    <?php endwhile; ?>
 
-</table>
+                </table>
 
-</div>
+            </div>
 
-</div>
+        </div>
 
-</section>
+    </section>
 
 </main>
 
 <footer>
-<p>Ama a un ángel 💙 | @AdoptaCR</p>
+        <p>Ama a un ángel 💙 | @AdoptaCR</p>
 </footer>
 
 </body>
