@@ -42,6 +42,24 @@
 }
 
 /* TARJETAS */
+/* Botón de solicitud - Versión más específica */
+#botonS {
+    background-color: rgb(14, 108, 190) !important;
+    color: rgb(255, 255, 255) !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    padding: 12px 30px !important;
+    border-radius: 8px !important;
+    font-weight: bold !important;
+    font-size: 16px !important;
+    border: 1px solid #b8d4e8 !important;
+}
+
+#botonS:hover {
+    background-color: rgb(14, 108, 190) !important;
+    color: rgb(255, 255, 255) !important;
+    transform: scale(1.02) !important;
+}
 
 .info-secciones {
     width: 1000px;

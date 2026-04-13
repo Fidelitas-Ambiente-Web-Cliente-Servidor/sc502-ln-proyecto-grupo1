@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title>AdoptaCR - Gestión de Adopción</title>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/sc502-ln-proyecto-grupo1/css/style.css">
     <link rel="stylesheet" href="/sc502-ln-proyecto-grupo1/css/index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   
   </head>
 
@@ -41,7 +41,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-custom <?php echo $activePage == 'servicios' ? 'active' : ''; ?>" href="servicios.php">
+                    <a class="nav-link nav-link-custom <?php echo $activePage == 'servicios' ? 'active' : ''; ?>" href="php/servicios.php">
                         Servicios
                     </a>
                 </li>
@@ -89,7 +89,7 @@
         <p>
             Inicia tu proceso de adopción de forma digital, segura y organizada.
         </p>
-        <a href="solicitud.php" class="btn">Iniciar Solicitud</a>
+        <a id="botonS" href="solicitud.php" class="botonS">Iniciar Solicitud</a>
     </div>
 </section>
 

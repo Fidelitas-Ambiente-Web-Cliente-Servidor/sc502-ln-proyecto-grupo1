@@ -1,0 +1,120 @@
+/* servicios.css - Estilos para la página de servicios */
+
+.servicios-header {
+    background: linear-gradient(135deg, #2E86C1, #1a5a7e);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.servicios-header h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.servicios-header p {
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+.servicios-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.servicio-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eef2f7;
+}
+
+.servicio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    border-color: #2E86C1;
+}
+
+.servicio-icono {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.servicio-card h3 {
+    color: #2E86C1;
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.servicio-card p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.servicio-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.duracion {
+    color: #666;
+    font-size: 14px;
+}
+
+.precio {
+    color: #2E86C1;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.btn-reservar {
+    background: linear-gradient(135deg, #2E86C1, #1f618d);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.btn-reservar:hover {
+    transform: scale(1.02);
+    background: linear-gradient(135deg, #1f618d, #154d6e);
+    box-shadow: 0 5px 15px rgba(46, 134, 193, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .servicios-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .servicios-header h1 {
+        font-size: 32px;
+    }
+    
+    .servicio-card {
+        padding: 20px;
+    }
+}
