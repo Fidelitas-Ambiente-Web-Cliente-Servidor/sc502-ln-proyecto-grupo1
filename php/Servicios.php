@@ -13,8 +13,8 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
         <div class="container">
-            <a class="navbar-brand" href="index.php">
-                <img src="./img/logo2.png" width="125"><br>
+            <a class="navbar-brand" href="../index.php">
+                <img src="../img/logo2.png" width="125"><br>
             </a>
             <button class="navbar-toggler" type="button"> 
                 <span class="navbar-toggler-icon"></span>
@@ -22,7 +22,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link nav-link-custom" href="index.php">Inicio</a>
+                        <a class="nav-link nav-link-custom" href="../index.php">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link nav-link-custom" href="conocenos.php">Conócenos</a>
@@ -31,7 +31,7 @@
                         <a class="nav-link nav-link-custom active" href="servicios.php">Servicios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-custom" href="tramites.php">Trámites</a>
+                        <a class="nav-link nav-link-custom" href="../tramites.php">Trámites</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link nav-link-custom" href="faq.php">FAQ</a>
@@ -135,13 +135,6 @@
 <footer>
     <p>Ama a un ángel 💙 | @AdoptaCR</p>
 </footer>
-
-<script>
-function reservarServicio(servicio) {
-    alert('Próximamente: Formulario de reserva para ' + servicio);
-    // Aquí luego redirigirás a reservar.php?servicio=nombre
-}
-</script>
 
 </body>
 </html>

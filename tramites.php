@@ -25,7 +25,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li><a class="nav-link" href="index.php">Inicio</a></li>
                     <li><a class="nav-link" href="conocenos.php">Conócenos</a></li>
-                    <li><a class="nav-link" href="servicios.php">Servicios</a></li>
+                    <li><a class="nav-link" href="php/servicios.php">Servicios</a></li>
                     <li><a class="nav-link active" href="tramites.php">Trámites</a></li>
                     <li><a class="nav-link" href="faq.php">FAQ</a></li>
                     <li><a class="nav-link" href="contacto.php">Contacto</a></li>
