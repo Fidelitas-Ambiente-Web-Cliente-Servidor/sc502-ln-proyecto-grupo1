@@ -1,3 +1,25 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['user'])) {
+    header("Location: login.php");
+    exit();
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin</title>
+</head>
+<body>
+
+<h2>Bienvenido al panel admin, <?php echo $_SESSION['user']; ?></h2>
+
+<a href="login.php">Ir al login</a>
+
+</body>
+</html>
 <!DOCTYPE html>
 <html lang="es">
 <head>
