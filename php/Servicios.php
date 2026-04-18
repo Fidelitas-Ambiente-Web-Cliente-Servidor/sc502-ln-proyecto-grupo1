@@ -25,19 +25,19 @@
                         <a class="nav-link nav-link-custom" href="../index.php">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-custom" href="conocenos.php">Conócenos</a>
+                        <a class="nav-link nav-link-custom" href="../conocenos.php">Conócenos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-custom active" href="servicios.php">Servicios</a>
+                        <a class="nav-link nav-link-custom active" href="../servicios.php">Servicios</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link nav-link-custom" href="../tramites.php">Trámites</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-custom" href="faq.php">FAQ</a>
+                        <a class="nav-link nav-link-custom" href="../faq.php">FAQ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-custom" href="contacto.php">Contacto</a>
+                        <a class="nav-link nav-link-custom" href="../contacto.php">Contacto</a>
                     </li>
                 </ul>
             </div>
