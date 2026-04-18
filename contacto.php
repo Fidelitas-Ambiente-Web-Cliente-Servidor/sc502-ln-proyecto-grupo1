@@ -1,6 +1,4 @@
-<?php
-$activePage = 'contacto';
-?>
+<?php $activePage = 'contacto';?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
