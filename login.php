@@ -18,8 +18,8 @@
     <h2>Login - AdoptaCR</h2>
 
     <form id="formLogin">
-        <input class="form-control mb-2" id="username" placeholder="Usuario">
-        <input type="password" class="form-control mb-2" id="password" placeholder="Contraseña">
+        <input class="form-control mb-2" id="username" name="username" placeholder="Usuario">
+        <input type="password" class="form-control mb-2" id="password" name="password" placeholder="Contraseña">
         <button type="submit" class="btn btn-primary">Ingresar</button>
     </form>
 

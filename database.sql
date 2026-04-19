@@ -27,5 +27,11 @@ CREATE TABLE solicitudes (
     fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+INSERT INTO usuarios (username, password)
+ALTER TABLE usuarios ADD rol VARCHAR(10) NOT NULL DEFAULT 'user';
 
+INSERT INTO usuarios (username, password, rol)
+VALUES ('admin', MD5('1234'), 'admin');
 
+INSERT INTO usuarios (username, password, rol)
+VALUES ('sofia', MD5('1234'), 'user');

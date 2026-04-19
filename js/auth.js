@@ -18,12 +18,23 @@ $(function () {
             option: "login"
         }, function (data) {
 
-            console.log(data); 
+            console.log(data);
 
-            data = JSON.parse(data);
+            try {
+                data = JSON.parse(data);
+            } catch (e) {
+                alert("Error del servidor");
+                return;
+            }
 
             if (data.response === "00") {
-                window.location = "admin.php";
+
+                if (data.rol === "admin") {
+                    window.location = "admin.php";
+                } else {
+                    window.location = "index.php";
+                }
+
             } else {
                 alert(data.message);
             }

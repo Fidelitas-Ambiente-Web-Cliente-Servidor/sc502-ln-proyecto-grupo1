@@ -1,25 +1,11 @@
 <?php
 session_start();
-
-if (!isset($_SESSION['user'])) {
-    header("Location: login.php");
+if (!isset($_SESSION['user']) || $_SESSION['rol'] !== 'admin') {
+    header("Location: index.php");
     exit();
 }
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Admin</title>
-</head>
-<body>
-
-<h2>Bienvenido al panel admin, <?php echo $_SESSION['user']; ?></h2>
-
-<a href="login.php">Ir al login</a>
-
-</body>
-</html>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -28,6 +14,8 @@ if (!isset($_SESSION['user'])) {
 
     <link rel="stylesheet" href="/sc502-ln-proyecto-grupo1/css/style.css">
     <link rel="stylesheet" href="/sc502-ln-proyecto-grupo1/css/admin.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -40,9 +28,11 @@ if (!isset($_SESSION['user'])) {
             <p>Panel Administrativo</p>
         </section>
     </div>
+
+    <div style="position:absolute; top:20px; right:20px;">
+        <a href="#" id="logoutBtn" class="btn btn-danger">Cerrar sesión</a>
+    </div>
 </header>
-
-
 
 <section class="hero-admin">
     <div class="hero-admin-contenido">
@@ -51,11 +41,9 @@ if (!isset($_SESSION['user'])) {
     </div>
 </section>
 
-
 <section class="admin-bienvenida">
-    <h1>Bienvenido Usuario Administrativo!</h1>
+    <h1>Bienvenido, <?php echo $_SESSION['user']; ?> 👋</h1>
 </section>
-
 
 <section class="admin-dashboard">
 
@@ -94,6 +82,17 @@ if (!isset($_SESSION['user'])) {
 <footer>
     <p>Ama a un ángel 💙 | @AdoptaCR</p>
 </footer>
+
+<!-- LOGOUT -->
+<script>
+$("#logoutBtn").click(function(e){
+    e.preventDefault();
+
+    $.post("index.php", { option: "logout" }, function(){
+        window.location = "login.php";
+    });
+});
+</script>
 
 </body>
 </html>
