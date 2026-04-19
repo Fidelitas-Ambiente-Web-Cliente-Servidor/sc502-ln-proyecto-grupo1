@@ -95,32 +95,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <li class="nav-item">
                         <a class="nav-link nav-link-custom" href="contacto.php">Contacto</a>
                     </li>
+                    <li class="nav-item">
+                    <span class="nav-link text-white">
+                     Hola, <?php echo $_SESSION['user']; ?>
+                    </span>
+                    </li>
 
-                
-                    <?php if(isset($_SESSION['user'])): ?>
-
-                        <li class="nav-item">
-                            <span class="nav-link text-white">
-                                Hola, <?php echo $_SESSION['user']; ?>
-                            </span>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="#" id="logoutBtn" class="nav-link nav-link-custom">
-                                Cerrar sesión
-                            </a>
-                        </li>
-
-                    <?php else: ?>
-
-                        <li class="nav-item">
-                            <a class="nav-link nav-link-custom" href="login.php">
-                                Login
-                            </a>
-                        </li>
-
-                    <?php endif; ?>
-
+                    <li class="nav-item">
+    <button id="logoutBtn" class="btn btn-danger ms-2">
+        Cerrar sesión
+    </button>
+</li>
                 </ul>
             </div>
 
