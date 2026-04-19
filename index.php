@@ -22,6 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($result->num_rows > 0) {
 
             $user = $result->fetch_assoc();
+
             $_SESSION['user'] = $user['username'];
             $_SESSION['rol'] = $user['rol'];
 
@@ -39,6 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         exit();
     }
+
     if (isset($_POST['option']) && $_POST['option'] == "logout") {
         session_destroy();
         echo json_encode(["response" => "00"]);
@@ -46,6 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -55,6 +58,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/sc502-ln-proyecto-grupo1/css/style.css">
     <link rel="stylesheet" href="/sc502-ln-proyecto-grupo1/css/index.css">
+
+   
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/auth.js"></script>
 </head>
@@ -66,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="container">
 
             <a class="navbar-brand" href="index.php">
-                <img src="./img/logo2.png" width="125"><br>
+                <img src="./img/logo2.png" width="125">
             </a>
 
             <div class="collapse navbar-collapse">
@@ -95,17 +100,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <li class="nav-item">
                         <a class="nav-link nav-link-custom" href="contacto.php">Contacto</a>
                     </li>
-                    <li class="nav-item">
-                    <span class="nav-link text-white">
-                     Hola, <?php echo $_SESSION['user']; ?>
-                    </span>
-                    </li>
 
-                    <li class="nav-item">
-    <button id="logoutBtn" class="btn btn-danger ms-2">
-        Cerrar sesión
-    </button>
-</li>
+                    <!-- LOGIN / LOGOUT -->
+                    <?php if(isset($_SESSION['user'])): ?>
+
+                        <li class="nav-item">
+                            <span class="nav-link text-white">
+                                Hola, <?php echo $_SESSION['user']; ?>
+                            </span>
+                        </li>
+
+                        <li class="nav-item">
+                            <button id="logoutBtn" class="btn btn-danger ms-2">
+                                Cerrar sesión
+                            </button>
+                        </li>
+
+                    <?php else: ?>
+
+                        <li class="nav-item">
+                            <a href="login.php" class="nav-link nav-link-custom">
+                                Login
+                            </a>
+                        </li>
+
+                    <?php endif; ?>
+
                 </ul>
             </div>
 
@@ -136,9 +156,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <section class="info">
     <h2>Bienvenido</h2>
     <p>
-        Esta plataforma permite a las personas interesadas iniciar 
-        el proceso de adopción de manera digital facilitando el 
-        registro, validación y seguimiento de solicitudes.
+        Esta plataforma permite iniciar el proceso de adopción de manera digital.
     </p>
 </section>
 
@@ -150,7 +168,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="card">
             <h3 onclick="toggleSeccion('quienes')">¿Quiénes Somos?</h3>
             <div id="quienes" class="contenido">
-                <p>AdoptaCR es un sistema digital orientado a la gestión organizada del proceso de adopción.</p>
+                <p>AdoptaCR gestiona el proceso de adopción.</p>
             </div>
         </div>
 
@@ -158,47 +176,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <h3 onclick="toggleSeccion('requisitos')">Requisitos Básicos</h3>
             <div id="requisitos" class="contenido">
                 <ul>
-                    <li>Ser mayor de 25 años.</li>
-                    <li>Documentación válida.</li>
-                    <li>Estabilidad económica.</li>
+                    <li>Mayor de 25 años</li>
+                    <li>Documentación válida</li>
                 </ul>
             </div>
         </div>
 
-        <div class="card">
-            <h3 onclick="toggleSeccion('proceso')">Proceso de Adopción</h3>
-            <div id="proceso" class="contenido">
-                <ol>
-                    <li>Registro</li>
-                    <li>Validación</li>
-                    <li>Evaluación</li>
-                </ol>
-            </div>
-        </div>
-
-        <div class="card">
-            <h3 onclick="toggleSeccion('legal')">Marco Legal</h3>
-            <div id="legal" class="contenido">
-                <p>Regulado por el PANI.</p>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<section class="valores">
-    <h2>Nuestros Principios</h2>
-
-    <div class="valores-grid">
-        <div class="valor">
-            <h4>Transparencia</h4>
-        </div>
-        <div class="valor">
-            <h4>Responsabilidad</h4>
-        </div>
-        <div class="valor">
-            <h4>Compromiso Social</h4>
-        </div>
     </div>
 </section>
 

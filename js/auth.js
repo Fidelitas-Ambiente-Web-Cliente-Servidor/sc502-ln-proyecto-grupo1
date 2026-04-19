@@ -42,5 +42,21 @@ $(function () {
         });
 
     });
+    $(document).on("click", "#logoutBtn", function (e) {
+
+    e.preventDefault();
+
+    console.log("Logout clickeado");
+
+    $.post("index.php", {
+        option: "logout"
+    }, function (data) {
+
+        console.log(data);
+        window.location = "login.php";
+
+    });
+
+});
 
 });
