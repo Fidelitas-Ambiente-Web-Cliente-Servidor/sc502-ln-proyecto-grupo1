@@ -1,5 +1,50 @@
 <?php
 session_start();
+require_once("config/Database.php");
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    if (isset($_POST['option']) && $_POST['option'] == "login") {
+
+        $db = new Database();
+        $conn = $db->connect();
+
+        $username = $_POST['username'];
+        $password = md5($_POST['password']);
+
+        $sql = "SELECT * FROM usuarios WHERE username = ? AND password = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ss", $username, $password);
+        $stmt->execute();
+
+        $result = $stmt->get_result();
+
+        if ($result->num_rows > 0) {
+
+            $user = $result->fetch_assoc();
+            $_SESSION['user'] = $user['username'];
+            $_SESSION['rol'] = $user['rol'];
+
+            echo json_encode([
+                "response" => "00",
+                "rol" => $user['rol']
+            ]);
+
+        } else {
+            echo json_encode([
+                "response" => "01",
+                "message" => "Usuario o contraseña incorrectos"
+            ]);
+        }
+
+        exit();
+    }
+    if (isset($_POST['option']) && $_POST['option'] == "logout") {
+        session_destroy();
+        echo json_encode(["response" => "00"]);
+        exit();
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">
