@@ -128,8 +128,105 @@
             <button class="btn-reservar" onclick="reservarServicio('Asesoría para Trámites')">Reservar ahora →</button>
         </div>
 
+        <div class="servicio-card">
+            <div class="servicio-icono">🗓️</div>
+            <h3>Consulte su citas</h3>
+            <p>Revise si su cita está programada.</p>
+            <a href="../visual/mi-cuenta-vista-servicios.php" class="btn-reservar"> Consultar </a>
+        </div>
+
     </div>
 </div>
+
+<!-- Modal de Reserva -->
+<div class="modal fade" id="reservaModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Reservar Servicio</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <form action="Agendar-servicio.php" method="POST">
+                <div class="modal-body">
+                    <input type="hidden" name="servicio" id="servicioSeleccionado">
+                    
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre Completo *</label>
+                        <input type="text" class="form-control" name="nombre" required>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo Electrónico *</label>
+                        <input type="email" class="form-control" name="email" required>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="telefono" class="form-label">Teléfono *</label>
+                        <input type="tel" class="form-control" name="telefono" required>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="fecha" class="form-label">Fecha *</label>
+                            <input type="date" class="form-control" name="fecha" id="fecha" required>
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                            <label for="hora" class="form-label">Hora *</label>
+                            <select class="form-control" name="hora" required>
+                                <option value="">Seleccione una hora</option>
+                                <option value="09:00">09:00 AM</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="13:00">01:00 PM</option>
+                                <option value="14:00">02:00 PM</option>
+                                <option value="15:00">03:00 PM</option>
+                                <option value="16:00">04:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="comentario" class="form-label">Comentario Adicional</label>
+                        <textarea class="form-control" name="comentario" rows="3" 
+                                  placeholder="¿Alguna observación o pregunta específica?"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Confirmar Reserva</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+function reservarServicio(servicio) {
+    document.getElementById('servicioSeleccionado').value = servicio;
+    // Establecer fecha mínima (mañana)
+    const fechaInput = document.getElementById('fecha');
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    fechaInput.min = tomorrow.toISOString().split('T')[0];
+    
+    new bootstrap.Modal(document.getElementById('reservaModal')).show();
+}
+
+// Mostrar mensajes de sesión
+<?php if (isset($_SESSION['success'])): ?>
+    alert("<?php echo $_SESSION['success']; ?>");
+    <?php unset($_SESSION['success']); ?>
+<?php endif; ?>
+
+<?php if (isset($_SESSION['error'])): ?>
+    alert("<?php echo $_SESSION['error']; ?>");
+    <?php unset($_SESSION['error']); ?>
+<?php endif; ?>
+</script>
+
+<!-- Agrega Bootstrap JS si no lo tienes -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <!-- Footer -->
 <footer>

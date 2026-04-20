@@ -1,0 +1,109 @@
+
+.admin-header {
+    background-color: #2E86C1;
+    color: white;
+    padding: 20px 0;
+    margin-bottom: 30px;
+}
+
+.estado-pendiente { 
+    background-color: #ffc107; 
+    color: #000; 
+    padding: 5px 12px; 
+    border-radius: 20px; 
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.estado-aprobada { 
+    background-color: #28a745; 
+    color: #fff; 
+    padding: 5px 12px; 
+    border-radius: 20px; 
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.estado-rechazada { 
+    background-color: #dc3545; 
+    color: #fff; 
+    padding: 5px 12px; 
+    border-radius: 20px; 
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.btn-aprobar {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.btn-aprobar:hover {
+    background-color: #218838;
+}
+
+.btn-rechazar {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.btn-rechazar:hover {
+    background-color: #c82333;
+}
+
+.btn-cerrar {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn-cerrar:hover {
+    background-color: #c82333;
+    color: white;
+}
+
+.modal-header {
+    background-color: #2E86C1;
+    color: white;
+}
+
+.btn-confirmar {
+    background-color: #2E86C1;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+}
+
+.btn-confirmar:hover {
+    background-color: #1f618d;
+}
+
+.comentario-cell {
+    max-width: 250px;
+    word-wrap: break-word;
+}
+
+.card-shadow {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    border-radius: 10px;
+    border: none;
+}

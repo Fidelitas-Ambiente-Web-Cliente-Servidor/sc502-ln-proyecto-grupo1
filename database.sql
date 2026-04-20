@@ -35,3 +35,19 @@ VALUES ('admin', MD5('1234'), 'admin');
 
 INSERT INTO usuarios (username, password, rol)
 VALUES ('sofia', MD5('1234'), 'user');
+
+CREATE TABLE IF NOT EXISTS reservas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre_cliente VARCHAR(100) NOT NULL,
+    email_cliente VARCHAR(100) NOT NULL,
+    telefono_cliente VARCHAR(20),
+    servicio VARCHAR(100) NOT NULL,
+    fecha DATE NOT NULL,
+    hora TIME NOT NULL,
+    comentario TEXT,
+    estado ENUM('pendiente', 'aprobada', 'rechazada') DEFAULT 'pendiente',
+    comentario_admin TEXT,
+    fecha_solicitud TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    INDEX idx_estado (estado),
+    INDEX idx_fecha (fecha)
+);

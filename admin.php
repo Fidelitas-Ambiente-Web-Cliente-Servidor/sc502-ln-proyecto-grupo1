@@ -74,6 +74,11 @@ if (!isset($_SESSION['user']) || $_SESSION['rol'] !== 'admin') {
             <p>Visualizar estadísticas del sistema.</p>
             <a href="admin_reportes.php" class="btn">Ingresar</a>
         </div>
+         <div class="card">
+            <h3>Servicios</h3>
+            <p>Visualizar las servicios agendados.</p>
+            <a href="php/agendar-servicio-admin.php" class="btn">Ingresar</a>
+        </div>
 
     </div>
 
@@ -83,7 +88,7 @@ if (!isset($_SESSION['user']) || $_SESSION['rol'] !== 'admin') {
     <p>Ama a un ángel 💙 | @AdoptaCR</p>
 </footer>
 
-<!-- LOGOUT -->
+
 <script>
 $("#logoutBtn").click(function(e){
     e.preventDefault();
