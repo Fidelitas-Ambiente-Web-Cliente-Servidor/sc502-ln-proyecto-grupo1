@@ -64,12 +64,6 @@ if (!isset($_SESSION['user']) || $_SESSION['rol'] !== 'admin') {
         </div>
 
         <div class="card">
-            <h3>Contenido Informativo</h3>
-            <p>Actualizar requisitos y etapas del proceso.</p>
-            <a href="admin_contenido.php" class="btn">Ingresar</a>
-        </div>
-
-        <div class="card">
             <h3>Reportes</h3>
             <p>Visualizar estadísticas del sistema.</p>
             <a href="admin_reportes.php" class="btn">Ingresar</a>

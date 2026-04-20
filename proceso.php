@@ -131,7 +131,6 @@
 
 <section class="proceso-acciones">
     <a href="solicitud.php" class="btn">Iniciar solicitud</a>
-    <a href="estado-solicitud.php" class="btn btn-outline">Consultar estado de solicitud</a>
 </section>
 
 </main>

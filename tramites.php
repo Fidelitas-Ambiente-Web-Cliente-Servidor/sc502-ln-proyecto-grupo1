@@ -53,7 +53,13 @@
 <section class="tramites-container">
 
     <div class="grid-tramites">
-
+        <!-- PROCESO -->
+        <div class="card-tramite">
+            <h3> Ver Proceso</h3>
+            <p>Consulta las etapas del proceso de adopción.</p>
+            <a href="proceso.php" class="btn-tramite">Ver proceso</a>
+        </div>
+        
         <!-- SOLICITUD -->
         <div class="card-tramite">
             <h3>Iniciar Solicitud</h3>
@@ -61,7 +67,6 @@
             <a href="solicitud.php" class="btn-tramite">Ir al formulario</a>
         </div>
 
-        <!-- DOCUMENTOS -->
         <div class="card-tramite">
             <h3>Subir Documentos</h3>
             <p>Adjunta tus documentos requeridos en formato PDF.</p>
@@ -80,24 +85,6 @@
                 <button type="button" class="btn-tramite mt-2">Subir documentos</button>
             </form>
         </div>
-
-        <!-- ESTADO -->
-        <div class="card-tramite">
-            <h3>Estado del Trámite</h3>
-            <p>Consulta el estado actual de tu solicitud.</p>
-
-            <div class="estado">
-                <span class="badge bg-warning">En revisión</span>
-            </div>
-        </div>
-
-        <!-- PROCESO -->
-        <div class="card-tramite">
-            <h3> Ver Proceso</h3>
-            <p>Consulta las etapas del proceso de adopción.</p>
-            <a href="proceso.php" class="btn-tramite">Ver proceso</a>
-        </div>
-
     </div>
 
 </section>

@@ -43,21 +43,25 @@ $porcE = $total ? ($revision/$total)*100 : 0;
 
                     <link rel="stylesheet" href="/sc502-ln-proyecto-grupo1/css/style.css">
                     <link rel="stylesheet" href="/sc502-ln-proyecto-grupo1/css/admin_reportes.css">
-
+                    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+                    <link rel="stylesheet" href="./css/Servicios/admin-reservas.css">
         </head>
 
 <body>
 
 <header>
     <div class="logo">
-        <span>💙</span>
-        <div>
+        <span class="icono">💙</span>
+        <section>
             <h1>AdoptaCR</h1>
-            <p>Reportes del sistema</p>
-        </div>
+            <p>Panel Administrativo</p>
+        </section>
+    </div>
+
+    <div style="position:absolute; top:20px; right:20px;">
+        <a href="./admin.php" class="btn-cerrar">Salir</a>
     </div>
 </header>
-
 <main>
 
 <section class="contenedor">

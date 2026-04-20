@@ -46,7 +46,8 @@ $result = $conn->query($sql);
                 <link rel="stylesheet" href="/sc502-ln-proyecto-grupo1/css/style.css">
                 <link rel="stylesheet" href="/sc502-ln-proyecto-grupo1/css/admin.css">
                 <link rel="stylesheet" href="/sc502-ln-proyecto-grupo1/css/admin_usuarios.css">
-
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+                <link rel="stylesheet" href="./css/Servicios/admin-reservas.css">
         </head>
 
 <body>
@@ -54,10 +55,14 @@ $result = $conn->query($sql);
 <header>
     <div class="logo">
         <span class="icono">💙</span>
-        <div>
+        <section>
             <h1>AdoptaCR</h1>
-            <p>Gestión de Usuarios</p>
-        </div>
+            <p>Panel Administrativo</p>
+        </section>
+    </div>
+
+    <div style="position:absolute; top:20px; right:20px;">
+        <a href="./admin.php" class="btn-cerrar">Salir</a>
     </div>
 </header>
 

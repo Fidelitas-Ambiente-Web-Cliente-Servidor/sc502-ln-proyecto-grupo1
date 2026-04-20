@@ -17,7 +17,7 @@
                 <h1>Panel de Reservas</h1>
                 <p class="mb-0">Gestionar solicitudes de servicios</p>
             </div>
-            <a href="/sc502-ln-proyecto-grupo1/index.php" class="btn-cerrar">Salir</a>
+            <a href="../admin.php" class="btn-cerrar">Salir</a>
         </div>
     </div>
 </div>
